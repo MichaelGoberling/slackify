@@ -1,9 +1,12 @@
 let prompts = require("./prompts");
 let actions = require("./actions");
+let server = require("./server");
 require("dotenv").config();
 
 (async () => {
+
   console.clear();
+  await server.initializeServer();
 
   let channels;
   try {
