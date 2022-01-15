@@ -3,10 +3,19 @@ let actions = require("./actions");
 let server = require("./server");
 require("dotenv").config();
 
+const validateEnvironmentConfiguration = () => {
+  return process.env.SLACK_URL && process.env.SLACK_ACCESS_TOKEN;
+}
+
 (async () => {
 
   console.clear();
   await server.initializeServer();
+
+  if (!validateEnvironmentConfiguration()) {
+    console.error("Invalid environment configuration. Check your .env");
+    process.exit();
+  }
 
   let channels;
   try {
