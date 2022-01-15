@@ -35,14 +35,19 @@ const selectChannelToSendMessageTo = (channels) => {
  * Asks the user for a message to send to a Slack channel.
  * @returns {string}
  */
-const requestMessageToSend = () => {
-  return inquirer.prompt([
-    {
-      name: "message",
-      message: "What would you like to send to the channel?",
-      type: "input",
-    },
-  ]);
+const requestMessageToSend = async () => {
+  let message = '';
+  while(message === '') {
+    response = await inquirer.prompt([
+      {
+        name: "message",
+        message: "What would you like to send to the channel?",
+        type: "input"
+      },
+    ]);
+    message = response.message;
+  }
+  return { message };
 };
 
 module.exports = {
