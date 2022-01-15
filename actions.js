@@ -14,8 +14,8 @@ const getChannels = async () => {
 };
 
 /**
- * Prompt the user to select a channel out of a list of provided channels. 
- * @param {string[]} channels 
+ * Prompt the user to select a channel out of a list of provided channels.
+ * @param {string[]} channels
  * @returns {string}
  */
 const selectChannel = async (channels) => {
@@ -28,7 +28,7 @@ const selectChannel = async (channels) => {
 
 /**
  * Prompt the user for a message to send to a channel. Send the message to a channel.
- * @param {string} channel 
+ * @param {string} channel
  */
 const sendMessageToChannel = async (channel) => {
   try {
