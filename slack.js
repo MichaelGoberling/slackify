@@ -36,6 +36,11 @@ const sendMessageToChannel = async (channel, message) => {
     let errorStr = `Error sending message to channel ${channel} in slack.js: ${response.data.error}`;
     throw new Error(errorStr);
   }
+
+  return {
+    message, 
+    channel
+  }
 };
 
 module.exports = {

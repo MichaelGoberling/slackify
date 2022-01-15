@@ -4,6 +4,7 @@
   "description": "Slackify is a CLI tool for interacting with the Slack API.",
   "main": "index.js",
   "scripts": {
+    "test": "mocha test/*.test.js",
     "start": "node index.js",
     "start:dev": "nodemon index.js",
     "build": "pkg ."
@@ -31,6 +32,7 @@
     "inquirer": "^8.2.0"
   },
   "devDependencies": {
+    "mocha": "^9.1.4",
     "nodemon": "^2.0.15",
     "pkg": "^5.5.2"
   }
