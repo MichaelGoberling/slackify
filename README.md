@@ -33,6 +33,16 @@ Slackify also runs an Express web server that accepts events from the Slack Even
 The web server is currently hosted as `localhost:80`, recommended to use ngrok to route requests 
 to localhost so that Slack can send events to the server. 
 
+## Testing
+
+Run Slackify unit tests. Slackify uses mocha for unit testing. Tests are stored in the 
+`test` folder and the test files are named pertaining to the files they are testing. 
+For example, `prompts.test.js` tests the `prompts.js` file. 
+
+```bash 
+npm run test
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
