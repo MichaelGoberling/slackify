@@ -1,5 +1,9 @@
 let inquirer = require("inquirer");
 
+/**
+ * Asks the user for an action to take with the CLI.
+ * @returns {object}
+ */
 const mainMenu = () => {
   return inquirer.prompt([
     {
@@ -11,6 +15,11 @@ const mainMenu = () => {
   ]);
 };
 
+/**
+ * Asks the user to select a channel from a list of provided channels.
+ * @param {string[]} channels 
+ * @returns 
+ */
 const selectChannelToSendMessageTo = (channels) => {
   return inquirer.prompt([
     {
@@ -22,14 +31,23 @@ const selectChannelToSendMessageTo = (channels) => {
   ]);
 };
 
-const requestMessageToSend = () => {
-  return inquirer.prompt([
-    {
-      name: "message",
-      message: "What would you like to send to the channel?",
-      type: "input",
-    },
-  ]);
+/**
+ * Asks the user for a message to send to a Slack channel.
+ * @returns {string}
+ */
+const requestMessageToSend = async () => {
+  let message = '';
+  while(message === '') {
+    response = await inquirer.prompt([
+      {
+        name: "message",
+        message: "What would you like to send to the channel?",
+        type: "input"
+      },
+    ]);
+    message = response.message;
+  }
+  return { message };
 };
 
 module.exports = {
