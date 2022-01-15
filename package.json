@@ -1,0 +1,26 @@
+{
+  "name": "slackify",
+  "version": "1.0.0",
+  "description": "Slackify is a CLI tool for interacting with the Slack API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelGoberling/slackify.git"
+  },
+  "keywords": [
+    "Slack",
+    "CLI"
+  ],
+  "author": "Michael Goberling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MichaelGoberling/slackify/issues"
+  },
+  "homepage": "https://github.com/MichaelGoberling/slackify#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
