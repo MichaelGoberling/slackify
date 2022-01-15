@@ -1,6 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
+/**
+ * Initializes the express server with an initial get route and a post route
+ * for handling webhooks from the Slack API.
+ */
 const initializeServer = () => {
     return new Promise((resolve, reject) => {
         let app = express();
