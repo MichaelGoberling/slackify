@@ -10,10 +10,15 @@ Use npm to install the necessary packages to run Slackify in a development envir
 npm install 
 ```
 
+Configure your environment by copying `.env.example` and adding the correct values to the `.env` file for your
+Slack access token and the URL to the Slack API.
+
 Run Slackify in a development environment.
+
 ```bash 
 npm run start:dev
 ```
+
 
 ## Packaging
 
